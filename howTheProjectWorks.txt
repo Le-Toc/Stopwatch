@@ -1,0 +1,11 @@
+How does the project work?
+
+First off it sets up the html and generates all the elements it needs.  It assigns ids to the elements it will need to reference in the js.  Then it links the page to the index.js javascript page.  In this page all of the code is placed inside a function that is called when the window finishing loading.  The js first declares all of the variables it needs.  Some of these are generic variables and some of these are created to reference elements of the HTML page.  There are three buttons on the page.  Each button has been assigned to a variable.  An annoyous function is created and assigned to each button's onclick event.  Each of these functions will execute the logic of their respective buttons.  In this code we are using the setInterval method.  This method will call another method over and over again based a set time.  The code then assigns this to the global variable Interval value.  buttonStart will start the interval and set it to call the startTimer method every 10th of a second.  buttonStop will clear the interval.  buttonReset will clear the interval and reset the time on the screen to 00:00.  It will do this by assigning '00' to the innerHTML of the screen time elements.  The startTimer method is the main logic of the stop watch.  It will be called every 10th of the second, will increase the time and update the display.
+
+Core Pieces:
+    HTML - Lists the elements on the page.  Gives ids to the elements that will be used in the js.  Links the js to this page.
+    JS - Holds all of the program code.  Calls a function holds all of the program code that runs when the window loads.  Within this code are the following:
+        variables - are used to hold generic values or to reference elements of the document
+        functions - There are two types of functions on this page, functions that the user calls and functions that are called from other funcitons;
+            user called functions - These are all the methods that are called when the user interacts with the program.  Any other functions are called from these methods.
+            other functions - This is the startTimer button.  These functions are not directly called from the user.  These are only called from other functions in the code.
